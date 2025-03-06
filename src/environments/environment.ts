@@ -1,3 +1,3 @@
 export const environment = {
-    gemini_api: 'produkcja 1'
+    gemini_api: 'produkcja 1 s'
 };

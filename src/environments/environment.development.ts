@@ -1,3 +1,3 @@
 export const environment = {
-    gemini_api: 'klucz ai'
+    gemini_api: 'klucz ai s'
 };
