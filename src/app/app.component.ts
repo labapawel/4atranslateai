@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AIService } from './ai.service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Translator';
+  constructor(private ai: AIService){
+    
+  }
 }

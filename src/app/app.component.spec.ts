@@ -20,10 +20,40 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Translator');
   });
 
-  it('should render title', () => {
+  it('Sprawdzenie treści w label-ce nad textarea', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Translator');
+    expect(compiled.querySelector('#labelTranslationInput')?.textContent).toContain('Wklej tekst do przetłumaczenia');
   });
+
+  it('Sprawdzenie czy wyświetla się textaera', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('#translationInput')).toBeTruthy();
+  });
+
+  it('Sprawdzenie treści w label-ce na inputem', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('#labelLanguageInput')?.textContent).toContain('Wprowadź język');
+  });
+
+  it('Sprawdzenie treści  placeholder w input jest OK', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLInputElement;
+    expect(compiled.querySelector('#languageInput')?.getAttribute('placeholder')).toContain('np. en, pl');
+  });
+
+  it('Sprawdzenie czy wyświetla się textaera', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('#languageInput')).toBeTruthy();
+  });
+
+
 });
